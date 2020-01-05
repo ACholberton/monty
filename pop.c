@@ -9,6 +9,14 @@
 
 void pop(stack_t **head, unsigned int element)
 {
-	(void)head;
+	stack_t *temp = *head;
+	stack_t *holder;
 	(void)element;
+
+	if (temp != NULL)
+	{
+		holder = temp->next;
+		free(temp);
+		*head = holder;
+	}
 }
