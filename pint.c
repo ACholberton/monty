@@ -8,13 +8,13 @@
 
 void pint(stack_t **head, unsigned int element)
 {
-	stack_t *stack;
+	stack_t *stack = *head;
 
-	if (*stack == NULL)
+	if (*head == NULL || head == NULL)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't pint, stack empty",
 			element);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", head->n);
+	printf("%d\n", stack->n);
 }
