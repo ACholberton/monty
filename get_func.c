@@ -53,6 +53,7 @@ void line_check(char *str, int line_num, stack_t **head)
 
 	keyword = strtok(str, " ");
 	keyword = strtok(keyword, "\n");
+	keyword = strtok(keyword, "\t");
 	j = strlen(keyword) + 1;
 	if (isdigit(str[j]))
 	{
