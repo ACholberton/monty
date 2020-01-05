@@ -9,11 +9,11 @@ void (*get_func(char *s, stack_t **head, unsigned int element))
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
-		/*{"pint", pint},
+		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", nop},*/
+		{"nop", nop},
 		{'\0', NULL}
 	};
 	int i = 0;
