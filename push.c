@@ -1,33 +1,26 @@
 #include "monty.h"
 
 /**
- *push -  pushes an element to the stack.
- *@element: is the element to be pushed.
- *@head: is the position.
- *Return: the new added element.
+ * push - Entry Point
+ * @element: is the element to be added to new node if needed
+ * @head: head node of linked list
+ * Description: the new added element.)?
  */
 
 void push(stack_t **head, unsigned int element)
 {
-	const stack_t *node = *head;
-	(void)element;
 
-        while (node)
-	{
-		printf("%d\n", node->n);
-		node = node->next;
-	}
+	stack_t *new;
 
-
-	/*stack_t *new;
 	new = (stack_t *) malloc(sizeof(stack_t));
 
 	if (new == NULL)
 	{
-        
+		printf("malloc failed");
 	}
 
 	new->n = element;
+
 	new->next = (*head);
 	new->prev = NULL;
 
@@ -36,10 +29,8 @@ void push(stack_t **head, unsigned int element)
 		(*head)->prev = new;
 	}
 
-	(*head) = new;*/
+	(*head) = new;
 
 }
 
-/*
-   sepaerate function for error calls
- */
+/* seperate function for error calls */

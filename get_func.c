@@ -1,10 +1,15 @@
 #include "monty.h"
 
 /**
- *
+ * get_func - Entry Point
+ * @s: string that contains func name
+ * @head: head of linked list to pass to function pointer
+ * @element: element for new node to pass to function pointer
+ * Description: Finds function based off string name given)?
+ * Return: 1 (SUCCESS)
  */
 
-void (*get_func(char *s, stack_t **head, unsigned int element))
+int get_func(char *s, stack_t **head, unsigned int element)
 {
 	instruction_t ops[] = {
 		{"push", push},
@@ -18,19 +23,26 @@ void (*get_func(char *s, stack_t **head, unsigned int element))
 	};
 	int i = 0;
 
-	/*if (!stack)
-	  return (NULL);*/
-	while (ops[i].opcode != NULL)
+	while (ops[i].opcode != '\0')
 	{
-		if (strcmp(s, ops[i].opcode) == 0)
+		if (strcmp(ops[i].opcode, s) == 0)
 		{
 			ops[i].f(head, element);
+			return (1);
 		}
 		i++;
 	}
-
-	return (NULL);
+	/* returns 0 to indicate function failed */
+	return (0);
 }
+
+/**
+ * line_check - Entry Point
+ * @str: string given from each line of file
+ * @line_num: current number of line in file
+ * @head: head of linked list
+ * Description: checks the file, passes data to the correct function)?
+ */
 
 void line_check(char *str, int line_num, stack_t **head)
 {
@@ -40,6 +52,7 @@ void line_check(char *str, int line_num, stack_t **head)
 	(void)line_num;
 
 	keyword = strtok(str, " ");
+	keyword = strtok(keyword, "\n");
 	j = strlen(keyword) + 1;
 	if (isdigit(str[j]))
 	{
@@ -49,6 +62,9 @@ void line_check(char *str, int line_num, stack_t **head)
 	{
 		/* report error that given digit isnt a digit*/
 	}
-	get_func(keyword, head, num);
+	if (get_func(keyword, head, num) == 0)
+	{
+		printf("get_func failed");
+	}
 
 }
