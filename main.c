@@ -4,7 +4,7 @@
 /**
  *
  */
-/*extern int num_line = 0;*/
+/*int num_line = 0;*/
 
 int main(int argc, char *argv[])
 {
@@ -12,8 +12,36 @@ int main(int argc, char *argv[])
 	int fd;
 	FILE *fp;
 	char *filename;
-	stack_t **head = NULL;
+	stack_t *head = NULL;
+	stack_t **main_head;
 	char str[MAXCHAR];
+	stack_t *new_node;
+	/*stack_t *node;*/
+
+
+	/* add node to list test */
+	main_head = &head;
+	new_node = (stack_t *) malloc(sizeof(stack_t));
+	if (new_node == NULL)
+	{
+		printf("Error");
+		exit(1);
+	}
+	new_node->n = 10;
+	new_node->next = NULL;
+	(*main_head) = new_node;
+	/*node = *main_head;
+
+	while (node)
+	{
+		printf("%d\n", node->n);
+		node = node->next;
+	}*/
+
+	/* end of test */
+
+
+
 
 	/* start of the line */
 	if (argc != 2)
@@ -41,7 +69,7 @@ int main(int argc, char *argv[])
 	while (fgets(str, MAXCHAR, fp) != NULL)
 	{
 		line_num += 1;
-		line_check(str, line_num, head);
+		line_check(str, line_num, main_head);
 	}
 	fclose(fp);
 	/*while(head != NULL)

@@ -9,30 +9,37 @@
 
 void push(stack_t **head, unsigned int element)
 {
-	stack_t *new;
+	const stack_t *node = *head;
+	(void)element;
 
-	/*if (isdigit(element) == 0)
-	  {
-	  printf("L<%i>: usage: push integer\n", num_line);
-	  exit(EXIT_FAILURE);
-	  }*/
+        while (node)
+	{
+		printf("%d\n", node->n);
+		node = node->next;
+	}
+
+
+	/*stack_t *new;
 	new = (stack_t *) malloc(sizeof(stack_t));
 
 	if (new == NULL)
 	{
-		free(new);
-		exit(0);
+        
 	}
 
 	new->n = element;
 	new->next = (*head);
 	new->prev = NULL;
+
 	if ((*head) != NULL)
 	{
 		(*head)->prev = new;
 	}
 
-	(*head) = new;
-       
+	(*head) = new;*/
+
 }
 
+/*
+   sepaerate function for error calls
+ */
