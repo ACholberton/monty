@@ -9,6 +9,13 @@
 
 void add(stack_t **head, unsigned int element)
 {
-	(void)head;
+	stack_t *top = *head;
+	stack_t *second;
+	int num = 0;
 	(void)element;
+	second = top->next;
+	num = second->n;
+	printf("test: %i", num);
+	/*free(top);
+	 *head = second;*/
 }
