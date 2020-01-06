@@ -17,6 +17,7 @@ void pop(stack_t **head, unsigned int line)
 		holder = temp->next;
 		free(temp);
 		*head = holder;
+		holder->prev = NULL;
 	}
 	else
 	{
