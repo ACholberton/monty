@@ -16,12 +16,12 @@ void push(stack_t **head, unsigned int line)
 
 	digit = strtok(NULL, " \n\t");
 
-	if (isdigit(digit) == 0)
+	num = atoi(digit);
+	if (!isdigit(num) == 0)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: usage: push integer\n", line);
 		exit(EXIT_FAILURE);
 	}
-	num = atoi(digit);
 
 	new = (stack_t *) malloc(sizeof(stack_t));
 
