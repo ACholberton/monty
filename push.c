@@ -16,7 +16,7 @@ void push(stack_t **head, unsigned int element)
 
 	if (new == NULL)
 	{
-		printf("malloc failed");
+		printf("malloc failed\n");
 	}
 
 	new->n = element;

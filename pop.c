@@ -13,6 +13,12 @@ void pop(stack_t **head, unsigned int element)
 	stack_t *holder;
 	(void)element;
 
+	if (head == NULL || *head == NULL)
+	{
+		dprintf(STDERR_FILENO, "L<%u>: can't pop an empty stack\n",
+			element);
+		exit(EXIT_FAILURE);
+	}
 	if (temp != NULL)
 	{
 		holder = temp->next;

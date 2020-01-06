@@ -10,7 +10,7 @@ void pall(stack_t **head, unsigned int element)
 	stack_t *stack = *head;
 	(void)element;
 
-	while (stack)
+	while (stack != NULL)
 	{
 		printf("%d\n", stack->n);
 		stack = stack->next;

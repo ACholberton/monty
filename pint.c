@@ -12,7 +12,7 @@ void pint(stack_t **head, unsigned int element)
 
 	if (*head == NULL || head == NULL)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: can't pint, stack empty",
+		dprintf(STDERR_FILENO, "L<%u>: can't pint, stack empty\n",
 			element);
 		exit(EXIT_FAILURE);
 	}

@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
-		printf("Could not open file %s", filename);
+		printf("Could not open file %s\n", filename);
 		return (1);
 	}
 
