@@ -21,6 +21,7 @@ int get_func(char *s, stack_t **head, unsigned int line)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", div_},
+		{"mul", _mul},
 		{'\0', NULL}
 	};
 	int i = 0;

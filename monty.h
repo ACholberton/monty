@@ -55,5 +55,6 @@ void nop(stack_t **head, unsigned int line);
 void freeall(stack_t **head);
 void sub(stack_t **head, unsigned int line);
 void div_(stack_t **head, unsigned int line);
+void _mul(stack_t **head, unsigned int line);
 
 #endif
