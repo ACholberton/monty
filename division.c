@@ -23,7 +23,7 @@ void div_(stack_t **head, unsigned int line)
 	i = (*head)->n;
 	j = (*head)->next->n;
 
-	if (i = 0)
+	if (i == 0)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: division by zero\n",
 			line);
