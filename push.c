@@ -13,7 +13,6 @@ void push(stack_t **head, unsigned int line)
 	stack_t *new;
 	char *digit;
 	int num = 0;
-	(void)line;
 
 	new = (stack_t *) malloc(sizeof(stack_t));
 
