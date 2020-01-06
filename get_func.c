@@ -19,6 +19,7 @@ int get_func(char *s, stack_t **head, unsigned int line)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{'\0', NULL}
 	};
 	int i = 0;
