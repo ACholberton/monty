@@ -41,6 +41,6 @@ int main(int argc, char *argv[])
 		line_num += 1;
 	}
 	fclose(fp);
-	/* call function to free all */
+	freeall(main_head);
 	return (0);
 }

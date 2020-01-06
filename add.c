@@ -17,6 +17,7 @@ void add(stack_t **head, unsigned int line)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short\n",
 			line);
+		freeall(head);
 		exit(EXIT_FAILURE);
 	}
 	i = (*head)->n;

@@ -20,6 +20,7 @@ void push(stack_t **head, unsigned int line)
 	if (!isdigit(num) == 0)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: usage: push integer\n", line);
+		freeall(head);
 		exit(EXIT_FAILURE);
 	}
 
@@ -28,6 +29,7 @@ void push(stack_t **head, unsigned int line)
 	if (new == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
+		freeall(head);
 		exit(EXIT_FAILURE);
 	}
 

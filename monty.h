@@ -52,5 +52,6 @@ void pop(stack_t **head, unsigned int line);
 void swap(stack_t **head, unsigned int line);
 void add(stack_t **head, unsigned int line);
 void nop(stack_t **head, unsigned int line);
+void freeall(stack_t **head);
 
 #endif

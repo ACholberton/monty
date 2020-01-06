@@ -14,6 +14,7 @@ void pint(stack_t **head, unsigned int line)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't pint, stack empty\n",
 			line);
+		freeall(head);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", stack->n);
