@@ -7,19 +7,25 @@
  * Description: the new added element.)?
  */
 
-void push(stack_t **head, unsigned int element)
+void push(stack_t **head, unsigned int line)
 {
 
 	stack_t *new;
+	char *digit;
+	int num = 0;
+	(void)line;
 
 	new = (stack_t *) malloc(sizeof(stack_t));
 
 	if (new == NULL)
 	{
-		printf("malloc failed\n");
+		printf("malloc failed");
 	}
 
-	new->n = element;
+	digit = strtok(NULL, " ");
+	num = atoi(digit);
+
+	new->n = num;
 
 	new->next = (*head);
 	new->prev = NULL;

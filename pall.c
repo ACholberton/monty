@@ -5,12 +5,12 @@
  * @element: element to be added to new node if needed
  * Description: prints all elements on the stack)?
  */
-void pall(stack_t **head, unsigned int element)
+void pall(stack_t **head, unsigned int line)
 {
 	stack_t *stack = *head;
-	(void)element;
+	(void)line;
 
-	while (stack != NULL)
+	while (stack)
 	{
 		printf("%d\n", stack->n);
 		stack = stack->next;

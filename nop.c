@@ -7,8 +7,8 @@
  * Description: Does not do a thing)?
  */
 
-void nop(stack_t **head, unsigned int element)
+void nop(stack_t **head, unsigned int line)
 {
 	(void)head;
-	(void)element;
+	(void)line;
 }

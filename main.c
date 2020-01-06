@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int line_num = 0;
+	int line_num = 1;
 	FILE *fp;
 	char *filename;
 	stack_t *head = NULL;
@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 
 	while (fgets(str, MAXCHAR, fp) != NULL)
 	{
-		line_num += 1;
 		line_check(str, line_num, main_head);
+		line_num += 1;
 	}
 	fclose(fp);
 	/* call function to free all */

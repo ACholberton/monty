@@ -9,7 +9,7 @@
  * Return: 1 (SUCCESS)
  */
 
-int get_func(char *s, stack_t **head, unsigned int element)
+int get_func(char *s, stack_t **head, unsigned int line)
 {
 	instruction_t ops[] = {
 		{"push", push},
@@ -27,7 +27,7 @@ int get_func(char *s, stack_t **head, unsigned int element)
 	{
 		if (strcmp(ops[i].opcode, s) == 0)
 		{
-			ops[i].f(head, element);
+			ops[i].f(head, line);
 			return (1);
 		}
 		i++;
@@ -47,25 +47,12 @@ int get_func(char *s, stack_t **head, unsigned int element)
 void line_check(char *str, int line_num, stack_t **head)
 {
 	char *keyword;
-	int num = 1;
-	int j = 0;
-	(void)line_num;
 
-	keyword = strtok(str, " ");
-	keyword = strtok(keyword, "\n");
-	keyword = strtok(keyword, "\t");
-	j = strlen(keyword) + 1;
-	if (isdigit(str[j]))
+	keyword = strtok(str, " \n\t");
+
+	if (get_func(keyword, head, line_num) == 0)
 	{
-		num = str[j] - '0';
-	}
-	else
-	{
-		/* report error that given digit isnt a digit*/
-	}
-	if (get_func(keyword, head, num) == 0)
-	{
-		printf("get_func failed\n");
+		printf("get_func failed");
 	}
 
 }

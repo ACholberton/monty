@@ -7,18 +7,12 @@
  * Description: removes top element of the stack)?
  */
 
-void pop(stack_t **head, unsigned int element)
+void pop(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
 	stack_t *holder;
-	(void)element;
+	(void)line;
 
-	if (head == NULL || *head == NULL)
-	{
-		dprintf(STDERR_FILENO, "L<%u>: can't pop an empty stack\n",
-			element);
-		exit(EXIT_FAILURE);
-	}
 	if (temp != NULL)
 	{
 		holder = temp->next;

@@ -7,7 +7,7 @@
  * Description: adds the tops two elements of the stack)?
  */
 
-void add(stack_t **head, unsigned int element)
+void add(stack_t **head, unsigned int line)
 {
 	int i, j, sum;
 	stack_t *current = *head;
@@ -16,7 +16,7 @@ void add(stack_t **head, unsigned int element)
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short\n",
-			element);
+			line);
 		exit(EXIT_FAILURE);
 	}
 	i = (*head)->n;
