@@ -11,7 +11,7 @@ void _mul(stack_t **head, unsigned int line)
 {
 	int i, j, result;
 
-	if (*head == NULL || head == NULL)
+	if (*head == NULL || head == NULL|| (*head)->next == NULL)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't mul, stack too short\n",
 			line);
@@ -24,5 +24,5 @@ void _mul(stack_t **head, unsigned int line)
 	result = i * j;
 
 	(*head)->n = result;
-	freeall(head);
+	free(head);
 }

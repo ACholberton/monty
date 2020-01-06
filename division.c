@@ -12,7 +12,7 @@ void div_(stack_t **head, unsigned int line)
 	int i, j, div;
 	stack_t *current = *head;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (*head == NULL || head == NULL || (*head)->next == NULL)
 	{
 		dprintf(STDERR_FILENO, "L<%u>: can't divide, stack too short\n",
 			line);
@@ -26,7 +26,7 @@ void div_(stack_t **head, unsigned int line)
 		dprintf(STDERR_FILENO, "L<%u>: division by zero\n", line);
 		exit(EXIT_FAILURE);
 	}
-	div = i / j;
+	div = j / i;
 	current->n = div;
 	free(current);
 }
