@@ -9,6 +9,6 @@
 
 void nop(stack_t **head, unsigned int line)
 {
-	(void)head;
+        (void)head;
 	(void)line;
 }

@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
-		printf("Could not open file %s\n", filename);
-		return (1);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
+	        exit (EXIT_FAILURE);
 	}
 
 	while (fgets(str, MAXCHAR, fp) != NULL)

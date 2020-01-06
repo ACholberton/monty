@@ -11,12 +11,16 @@ void pop(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
 	stack_t *holder;
-	(void)line;
 
 	if (temp != NULL)
 	{
 		holder = temp->next;
 		free(temp);
 		*head = holder;
+	}
+	else
+	{
+		dprintf(STDERR_FILENO, "L<%u>: can't pop an empty stack", line);
+		exit(EXIT_FAILURE);
 	}
 }

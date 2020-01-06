@@ -19,11 +19,17 @@ void push(stack_t **head, unsigned int line)
 
 	if (new == NULL)
 	{
-		printf("malloc failed");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
 	digit = strtok(NULL, " ");
 	num = atoi(digit);
+
+	if (!isdigit(num) == 0)
+	{
+		dprintf(STDERR_FILENO, "L<%u>: usage: push integer\n", line);
+	}
 
 	new->n = num;
 
