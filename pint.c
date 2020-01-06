@@ -2,7 +2,7 @@
 /**
  * pint - Entry Point
  * @head: head of linked list
- * @element: element for new node if needed
+ * @line: Line number
  * Description: prints the value at the top of the stack)?
  */
 

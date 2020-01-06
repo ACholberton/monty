@@ -4,7 +4,7 @@
  * get_func - Entry Point
  * @s: string that contains func name
  * @head: head of linked list to pass to function pointer
- * @element: element for new node to pass to function pointer
+ * @line: line number
  * Description: Finds function based off string name given)?
  * Return: 1 (SUCCESS)
  */

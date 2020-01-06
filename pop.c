@@ -3,7 +3,7 @@
 /**
  * pop - Entry Point
  * @head: head of linked list
- * @element: element to be added to new node if needed
+ * @line: line number
  * Description: removes top element of the stack)?
  */
 

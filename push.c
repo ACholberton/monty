@@ -2,7 +2,7 @@
 
 /**
  * push - Entry Point
- * @element: is the element to be added to new node if needed
+ * @line: line number
  * @head: head node of linked list
  * Description: the new added element.)?
  */

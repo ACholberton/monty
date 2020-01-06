@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	if (fp == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
-	        exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 
 	while (fgets(str, MAXCHAR, fp) != NULL)

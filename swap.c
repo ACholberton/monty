@@ -3,8 +3,8 @@
 /**
  * swap - Entry Point
  * @head: head node of linked list
- * @element: element to add to new node if needed
- * Description: swaps the top two elements of the stack
+ * @line: current line number of file
+ * Description: swaps the top two elements of the stack)?
  */
 
 void swap(stack_t **head, unsigned int line)
