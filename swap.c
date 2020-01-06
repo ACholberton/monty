@@ -9,7 +9,7 @@
 
 void swap(stack_t **head, unsigned int element)
 {
-        int tmp1, tmp2;
+	int tmp1, tmp2;
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
