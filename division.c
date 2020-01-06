@@ -11,22 +11,26 @@ void div_(stack_t **head, unsigned int line)
 {
 	int i, j, div;
 	stack_t *current = *head;
+	stack_t *next = (*head)->next;
 
 	if (*head == NULL || head == NULL || (*head)->next == NULL)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: can't divide, stack too short\n",
+		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short\n",
 			line);
 		freeall(head);
 		exit(EXIT_FAILURE);
 	}
 	i = (*head)->n;
 	j = (*head)->next->n;
-	if (i == 0)
+
+	if (i = 0)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: division by zero\n", line);
+		dprintf(STDERR_FILENO, "L<%u>: division by zero\n",
+			line);
 		exit(EXIT_FAILURE);
 	}
 	div = j / i;
-	current->n = div;
+	current->next->n = div;
 	free(current);
+	(*head) = next;
 }
