@@ -11,7 +11,6 @@ void div_(stack_t **head, unsigned int line)
 {
 	int i, j, div;
 	stack_t *current = *head;
-	stack_t *next = (*head)->next;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
@@ -28,7 +27,6 @@ void div_(stack_t **head, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 	div = i / j;
-	current->next->n = div;
+	current->n = div;
 	free(current);
-	(*head) = next;
 }
