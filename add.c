@@ -9,13 +9,21 @@
 
 void add(stack_t **head, unsigned int element)
 {
-	stack_t *top = *head;
-	stack_t *second;
-	int num = 0;
-	(void)element;
-	second = top->next;
-	num = second->n;
-	printf("test: %i", num);
-	/*free(top);
-	 *head = second;*/
+	int i, j, sum;
+	stack_t *current = *head;
+	stack_t *next = (*head)->next;
+
+	if (*head == NULL || (*head)->next == NULL)
+	{
+		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short",
+			element);
+		exit(EXIT_FAILURE);
+	}
+	i = (*head)->n;
+	j = (*head)->next->n;
+
+	sum = i + j;
+	current->next->n = sum;
+	free(current);
+	(*head) = next;
 }
