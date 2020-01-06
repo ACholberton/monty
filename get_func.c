@@ -20,6 +20,7 @@ int get_func(char *s, stack_t **head, unsigned int line)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"div", div_},
 		{'\0', NULL}
 	};
 	int i = 0;
