@@ -52,6 +52,7 @@ void line_check(char *str, int line_num, stack_t **head)
 
 	if (get_func(keyword, head, line_num) == 0)
 	{
-		dprintf(STDERR_FILENO, "L<%i>: unknown instruction %s\n", line_num, keyword);
+		dprintf(STDERR_FILENO, "L<%i>: unknown instruction %s\n",
+			line_num, keyword);
 	}
 }
