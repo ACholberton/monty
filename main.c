@@ -34,11 +34,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
-
 	while (fgets(str, MAXCHAR, fp) != NULL)
 	{
-			line_check(str, line_num, main_head);
-			line_num += 1;
+		line_check(str, line_num, main_head);
+		line_num += 1;
 	}
 	fclose(fp);
 	freeall(main_head);
