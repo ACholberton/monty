@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 
 	while (fgets(str, MAXCHAR, fp) != NULL)
 	{
-		line_check(str, line_num, main_head);
-		line_num += 1;
+			line_check(str, line_num, main_head);
+			line_num += 1;
 	}
 	fclose(fp);
 	freeall(main_head);
