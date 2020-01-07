@@ -12,7 +12,7 @@ void pint(stack_t **head, unsigned int line)
 
 	if (*head == NULL || head == NULL)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: can't pint, stack empty\n",
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n",
 			line);
 		freeall(head);
 		exit(EXIT_FAILURE);

@@ -15,7 +15,7 @@ void div_(stack_t **head, unsigned int line)
 
 	if (*head == NULL || head == NULL || (*head)->next == NULL)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short\n",
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n",
 			line);
 		freeall(head);
 		exit(EXIT_FAILURE);
@@ -25,7 +25,7 @@ void div_(stack_t **head, unsigned int line)
 
 	if (i == 0)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: division by zero\n",
+		dprintf(STDERR_FILENO, "L%u: division by zero\n",
 			line);
 		exit(EXIT_FAILURE);
 	}

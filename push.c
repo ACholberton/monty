@@ -19,7 +19,7 @@ void push(stack_t **head, unsigned int line)
 	num = atoi(digit);
 	if (!isdigit(num) == 0)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: usage: push integer\n", line);
+		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line);
 		freeall(head);
 		exit(EXIT_FAILURE);
 	}

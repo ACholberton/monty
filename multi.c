@@ -15,7 +15,7 @@ void _mul(stack_t **head, unsigned int line)
 
 	if (*head == NULL || head == NULL || (*head)->next == NULL)
 	{
-		dprintf(STDERR_FILENO, "L<%u>: can't add, stack too short\n",
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n",
 			line);
 		freeall(head);
 		exit(EXIT_FAILURE);
